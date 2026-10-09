@@ -55,6 +55,15 @@
 
   const PROJECTS = [
     {
+      icon: '📒', cat: 'research', catLabel: 'Research',
+      title: 'Tokenomics · 区块链经济学研究笔记',
+      desc: 'A research-driven portfolio (not a code repo): an economics question answered with on-chain data. Note 01 asks whether EIP-1559\u2019s base-fee burn squeezes validator real yield \u2014 DuneSQL queries, a literature review, and a quantified \u201cstructural tax rate\u201d \u03c4 = burn / (burn + tip).',
+      metrics: ['~4.7k-word note', 'Structural tax \u03c4 \u2248 40\u201370%'],
+      tags: ['DuneSQL', 'Tokenomics', 'MEV', 'Research'],
+      link: 'https://github.com/DingBangBang/tokenomics-research',
+      linkLabel: 'Read the research note'
+    },
+    {
       icon: '🐋', cat: 'onchain', catLabel: 'On-Chain',
       title: 'On-Chain Whale Behavior Monitoring',
       desc: 'Real-time polling pipeline ingesting large ETH transfers from Etherscan, detecting whale movements above a configurable USD threshold, persisting to SQLite and visualising flows and address relationships.',
@@ -404,7 +413,7 @@
         '<p class="pc-desc">' + esc(p.desc) + '</p>' +
         '<div class="pc-metrics">' + p.metrics.map(m => '<span>' + esc(m) + '</span>').join('') + '</div>' +
         '<div class="pc-tags">' + p.tags.map(t => '<i>' + esc(t) + '</i>').join('') + '</div>' +
-        '<a class="pc-link" href="' + p.link + '" target="_blank" rel="noopener" data-cursor="hover">View on GitHub <span>→</span></a>';
+        '<a class="pc-link" href="' + p.link + '" target="_blank" rel="noopener" data-cursor="hover">' + esc(p.linkLabel || 'View on GitHub') + ' <span>→</span></a>';
       grid.appendChild(card);
 
       // 3D tilt + spotlight

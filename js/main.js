@@ -56,12 +56,39 @@
   const PROJECTS = [
     {
       icon: '📒', cat: 'research', catLabel: 'Research',
-      title: 'Tokenomics · 区块链经济学研究笔记',
+      title: 'Tokenomics · Blockchain Economics Research Notes — Gas-Fee Redistribution and Its Impact on Ethereum Validator Revenue',
       desc: 'A research-driven portfolio (not a code repo): an economics question answered with on-chain data. Note 01 asks whether EIP-1559\u2019s base-fee burn squeezes validator real yield \u2014 DuneSQL queries, a literature review, and a quantified \u201cstructural tax rate\u201d \u03c4 = burn / (burn + tip).',
       metrics: ['~4.7k-word note', 'Structural tax \u03c4 \u2248 40\u201370%'],
       tags: ['DuneSQL', 'Tokenomics', 'MEV', 'Research'],
       link: 'https://github.com/DingBangBang/tokenomics-research',
       linkLabel: 'Read the research note'
+    },
+    {
+      icon: '⚖️', cat: 'research', catLabel: 'Research',
+      title: 'Value Distribution in the MEV-Boost Era',
+      desc: 'Micro · Validators, builders and searchers. Who captures ordering-rights rent under PBS? Evidence from 500 blocks across 5 MEV-Boost relays: MEV is power-law distributed and the top-3 builders capture ~40% of value (HHI ~0.09).',
+      metrics: ['500 blocks', 'Top-3 builders ~40%'],
+      tags: ['MEV', 'PBS', 'Relay API'],
+      link: 'https://github.com/DingBangBang/tokenomics-research/blob/main/research/02-mev-boost-value-distribution.md',
+      linkLabel: 'Read Note 02'
+    },
+    {
+      icon: '🌾', cat: 'research', catLabel: 'Research',
+      title: 'Liquidity Mining: How Much Subsidy Becomes Real Volume?',
+      desc: 'Meso · The subsidy efficiency of token incentives. Across 985 pools (TVL >= $1M) the median yield is only 0.6% subsidised — yet 146 pools are >90% subsidised: a farm-and-dump long tail. Protocol revenue is highly concentrated at the top.',
+      metrics: ['985 pools', '146 pools >90% subsidised'],
+      tags: ['DeFiLlama', 'Token Incentives', 'DeFi'],
+      link: 'https://github.com/DingBangBang/tokenomics-research/blob/main/research/03-liquidity-mining-subsidy-efficiency.md',
+      linkLabel: 'Read Note 03'
+    },
+    {
+      icon: '📉', cat: 'research', catLabel: 'Research',
+      title: 'Does High Funding Predict a Pullback?',
+      desc: 'Macro · Evidence from crypto derivatives. On 359 daily observations (BTC perps), corr(funding, forward 7-day return) is about -0.06 — a weak contrarian signal. Funding is a crowding gauge, not a reliable timing trigger.',
+      metrics: ['359 days', 'Corr ~ -0.06'],
+      tags: ['Funding Rate', 'Derivatives', 'Hyperliquid'],
+      link: 'https://github.com/DingBangBang/tokenomics-research/blob/main/research/04-funding-rate-market-top-signal.md',
+      linkLabel: 'Read Note 04'
     },
     {
       icon: '🐋', cat: 'onchain', catLabel: 'On-Chain',

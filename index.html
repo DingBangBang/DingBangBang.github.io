@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bonnie Bennett · Senior Data Analyst / Data Scientist</title>
+<meta name="description" content="Bonnie Bennett — Senior Data Analyst & Data Scientist. 5+ years across top-tier crypto exchanges and Fortune Global 500 companies. Python, SQL, on-chain analytics, ML, BI automation." />
+<meta name="author" content="Bonnie Bennett" />
+<meta name="theme-color" content="#05060a" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Bonnie Bennett · Senior Data Analyst / Data Scientist" />
+<meta property="og:description" content="Data into decisions. On-chain analytics, ML, and BI automation portfolio." />
+<meta property="og:image" content="assets/avatar.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== Ambient layers ===== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+<canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+<div class="grid-overlay" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ===== Navigation ===== -->
+<header class="nav" id="nav">
+  <a href="#home" class="nav-logo">
+    <span class="logo-mark">BB</span>
+    <span class="logo-text">bonnie<b>.data</b></span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <a href="assets/Resume.pdf" download class="btn btn-ghost btn-sm" data-cursor="hover">Résumé</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="hero section">
+    <div class="hero-inner">
+      <div class="hero-badge reveal">
+        <span class="pulse-dot"></span> Open to Data Science opportunities
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="line">Hi, I'm <span class="gradient-text">Bonnie Bennett</span></span>
+        <span class="line hero-type"><span id="typedRole" class="type-target"></span><span class="caret">▌</span></span>
+      </h1>
+      <p class="hero-sub reveal">
+        I turn messy, high-volume data into decisions — 5+ years across
+        <b>top-tier crypto exchanges</b> &amp; <b>Fortune Global 500</b> companies.
+        Currently building user-behavior analytics, on-chain intelligence and ML pipelines.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary" data-cursor="hover">View Portfolio</a>
+        <a href="#contact" class="btn btn-outline" data-cursor="hover">Get in Touch</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num" data-count="5" data-suffix="+">0</span><span class="stat-label">Years in Data</span></div>
+        <div class="stat"><span class="stat-num" data-count="46" data-suffix="">0</span><span class="stat-label">Dashboards Shipped</span></div>
+        <div class="stat"><span class="stat-num" data-count="100" data-suffix="+">0</span><span class="stat-label">Data Requests Served</span></div>
+        <div class="stat"><span class="stat-num" data-count="18" data-suffix="M+">0</span><span class="stat-label">Records Mined</span></div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down">
+      <span class="mouse"><span class="wheel"></span></span>
+      <span class="cue-text">scroll</span>
+    </a>
+  </section>
+
+  <!-- ===== Ticker ===== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="section">
+    <div class="section-head reveal">
+      <span class="section-index">01</span>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card glass reveal" data-tilt>
+        <div class="avatar-wrap">
+          <img src="assets/avatar.svg" alt="Bonnie Bennett avatar" class="avatar" width="200" height="200" />
+          <span class="avatar-ring"></span>
+        </div>
+        <h3 class="about-name">Bonnie Bennett</h3>
+        <p class="about-role">Senior Data Analyst / Data Scientist</p>
+        <ul class="about-meta">
+          <li><span class="meta-k">📍</span> Dubai, UAE</li>
+          <li><span class="meta-k">🏢</span> Bybit</li>
+          <li><span class="meta-k">🎓</span> MSc Data Science (in progress)</li>
+          <li><span class="meta-k">🗣️</span> Multilingual · ENTP</li>
+        </ul>
+        <div class="about-socials">
+          <a href="https://github.com/DingBangBang" target="_blank" rel="noopener" class="chip-link" data-cursor="hover">GitHub</a>
+          <a href="https://www.linkedin.com/in/bonniebennett333/" target="_blank" rel="noopener" class="chip-link" data-cursor="hover">LinkedIn</a>
+          <a href="assets/Resume.pdf" download class="chip-link" data-cursor="hover">Résumé</a>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p class="lead reveal">
+          I'm a data analyst turned data scientist from Asia 🇨🇳, now based in Dubai 🇦🇪.
+          I archive scripts, break things, and rebuild them better — with a bias for
+          <b>automation</b>, <b>cost-effectiveness</b>, and decisions that actually move the business.
+        </p>
+        <div class="about-points">
+          <div class="point reveal">
+            <div class="point-icon">📊</div>
+            <div><h4>Data → Decisions</h4><p>Answer the how and why, then propose data-backed recommendations that drive growth.</p></div>
+          </div>
+          <div class="point reveal">
+            <div class="point-icon">🧠</div>
+            <div><h4>User Psychology</h4><p>Dive into behavioral root causes like a PM — funnels, lifecycle, RFM, churn, LTV.</p></div>
+          </div>
+          <div class="point reveal">
+            <div class="point-icon">⚡</div>
+            <div><h4>Immersive Coding</h4><p>Structured thinking and workflow automation — from Airflow DAGs to AI agents.</p></div>
+          </div>
+          <div class="point reveal">
+            <div class="point-icon">🌍</div>
+            <div><h4>Digital Nomad</h4><p>Around-the-world adventures, X-sports and travel — with a tranquil, steady core.</p></div>
+          </div>
+        </div>
+        <div class="tag-row reveal">
+          <span class="tag">On-Chain Analytics</span>
+          <span class="tag">Crypto Exchange</span>
+          <span class="tag">User Behavior</span>
+          <span class="tag">Online Retail</span>
+          <span class="tag">Tokenomics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="section">
+    <div class="section-head reveal">
+      <span class="section-index">02</span>
+      <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skills-panel glass reveal">
+        <div class="skill-tabs" id="skillTabs" role="tablist"></div>
+        <div class="skill-list" id="skillList"></div>
+      </div>
+      <div class="radar-panel glass reveal">
+        <h4 class="panel-title">Core Proficiency</h4>
+        <canvas id="radarCanvas" width="360" height="360"></canvas>
+        <p class="radar-note">Hover / tap a label to inspect.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Experience ===== -->
+  <section id="experience" class="section">
+    <div class="section-head reveal">
+      <span class="section-index">03</span>
+      <h2 class="section-title">Experience</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="timeline" id="timeline">
+      <article class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-role">Senior Data Analyst</h3>
+              <p class="tl-company">Bybit · Dubai, UAE · Full-time</p>
+            </div>
+            <span class="tl-date">Mar 2024 – Jul 2026</span>
+          </div>
+          <ul class="tl-list">
+            <li><b>Products:</b> Built 46 automated marketing dashboards on Datawind; real-time stream processing unified multi-source data (DB, GA4, Firebase, AppsFlyer, offline lists) into a real-time user profiling &amp; campaign tracking system — <b>+2.7%</b> signup conversion, <b>−6.3%</b> CPA.</li>
+            <li><b>Services:</b> Self-service user-behavior analytics framework automating Sensor front-end data (views, dwell, clicks, churn, funnel, page jumps) — <b>+80%</b> faster decision cycles, <b>100+</b> cross-department requests, <b>15%</b> marketing budget optimization.</li>
+            <li><b>Business Support:</b> ~26 in-depth reports/quarter — ROI drill-downs, attribution of signup/eftd/cpa/arpu7/ltv CVR bottlenecks, campaign performance &amp; ranking, ad-cost vs. social correlation, CTA conversion attribution.</li>
+            <li><b>Data-driven Decision:</b> Set core margin targets, computed QoQ growth &amp; market forecasts; deployed as an <b>Airflow DAG</b> for automated quarterly forecasting with self-monitoring error.</li>
+          </ul>
+          <div class="tl-tags"><span>Crypto</span><span>Real-time</span><span>Airflow</span><span>Datawind</span></div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-role">Business Intelligence Analyst</h3>
+              <p class="tl-company">NovaDAX · Beijing / Brazil · Full-time</p>
+            </div>
+            <span class="tl-date">Jun 2021 – Mar 2024</span>
+          </div>
+          <ul class="tl-list">
+            <li><b>Products:</b> Constructed &amp; optimized Grafana / Dune dashboards tracking <b>200+ metrics</b>.</li>
+            <li><b>Services:</b> Automated crypto-trading &amp; on-chain reports — processing time cut from <b>2 hrs → 20 min</b>.</li>
+            <li><b>Business Support:</b> Measured ad-channel ROI via Google Analytics API (<b>−11.5%</b> CAC); LTV forecasting for airdrop campaigns (<b>+6%</b> transaction CVR).</li>
+            <li><b>Data-driven Decision:</b> Built a user risk-score framework (<b>−9.5%</b> risk); keyword triggers in customer service cut complaints <b>−32%</b>.</li>
+          </ul>
+          <div class="tl-tags"><span>Grafana</span><span>Dune</span><span>On-chain</span><span>LTV</span></div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal tl-compact">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-top">
+            <div><h3 class="tl-role">Strategy Analyst, Growth</h3><p class="tl-company">BlueFocus · Shanghai · Internship</p></div>
+            <span class="tl-date">Dec 2020 – Apr 2021</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal tl-compact">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-top">
+            <div><h3 class="tl-role">Business Analyst, E-Commerce</h3><p class="tl-company">Estée Lauder · Shanghai · Internship</p></div>
+            <span class="tl-date">Aug 2020 – Dec 2020</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal tl-compact">
+        <div class="tl-dot"></div>
+        <div class="tl-card glass">
+          <div class="tl-top">
+            <div><h3 class="tl-role">Operation Analyst</h3><p class="tl-company">JD.com · Beijing · Internship</p></div>
+            <span class="tl-date">Nov 2019 – Aug 2020</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="section">
+    <div class="section-head reveal">
+      <span class="section-index">04</span>
+      <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="filters reveal" id="projectFilters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="onchain">On-Chain</button>
+      <button class="filter" data-filter="ml">ML / Data Science</button>
+      <button class="filter" data-filter="bi">BI / Analytics</button>
+      <button class="filter" data-filter="nlp">NLP</button>
+    </div>
+
+    <div class="project-grid" id="projectGrid"></div>
+  </section>
+
+  <!-- ===== Certificates ===== -->
+  <section id="certs" class="section">
+    <div class="section-head reveal">
+      <span class="section-index">05</span>
+      <h2 class="section-title">Certificates</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="cert-grid" id="certGrid"></div>
+  </section>
+
+  <!-- ===== Terminal ===== -->
+  <section id="terminal" class="section">
+    <div class="section-head reveal">
+      <span class="section-index">06</span>
+      <h2 class="section-title">Interactive <span class="gradient-text">Terminal</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="terminal glass reveal" id="terminalBox">
+      <div class="term-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="term-title">bonnie@data-lab: ~</span>
+      </div>
+      <div class="term-body" id="termBody"></div>
+      <div class="term-input-line">
+        <span class="prompt">bonnie@data-lab:~$</span>
+        <input type="text" id="termInput" class="term-input" autocomplete="off" spellcheck="false" aria-label="terminal input" placeholder="type 'help' and hit enter…" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section">
+    <div class="section-head reveal">
+      <span class="section-index">07</span>
+      <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <p class="lead">Open to Data Science roles, analytics collaborations, and interesting on-chain problems. Reach me anywhere below — I reply fast. 🐱</p>
+        <div class="contact-links">
+          <a class="contact-item glass" href="mailto:dingbangchu@gmail.com" data-cursor="hover"><span class="ci-ico">✉️</span><span class="ci-body"><b>Email</b><i>dingbangchu@gmail.com</i></span><span class="ci-arrow">→</span></a>
+          <a class="contact-item glass" href="https://www.linkedin.com/in/bonniebennett333/" target="_blank" rel="noopener" data-cursor="hover"><span class="ci-ico">in</span><span class="ci-body"><b>LinkedIn</b><i>in/bonniebennett333</i></span><span class="ci-arrow">→</span></a>
+          <a class="contact-item glass" href="https://github.com/DingBangBang" target="_blank" rel="noopener" data-cursor="hover"><span class="ci-ico">⌥</span><span class="ci-body"><b>GitHub</b><i>DingBangBang</i></span><span class="ci-arrow">→</span></a>
+          <a class="contact-item glass" href="https://t.me/bonniebennett333" target="_blank" rel="noopener" data-cursor="hover"><span class="ci-ico">✈️</span><span class="ci-body"><b>Telegram</b><i>@bonniebennett333</i></span><span class="ci-arrow">→</span></a>
+          <a class="contact-item glass" href="https://wa.me/971556106241" target="_blank" rel="noopener" data-cursor="hover"><span class="ci-ico">💬</span><span class="ci-body"><b>WhatsApp</b><i>+971 55 610 6241</i></span><span class="ci-arrow">→</span></a>
+        </div>
+      </div>
+      <div class="contact-right glass reveal">
+        <h4 class="panel-title">Quick Facts</h4>
+        <ul class="fact-list">
+          <li><span>Role</span><b>Senior Data Analyst</b></li>
+          <li><span>Focus</span><b>Data Science / On-Chain</b></li>
+          <li><span>Domain</span><b>Crypto Exchange · Retail</b></li>
+          <li><span>Stack</span><b>Python · SQL · ML · BI</b></li>
+          <li><span>Base</span><b>Dubai, UAE (UTC+4)</b></li>
+          <li><span>Status</span><b class="ok">Open to offers</b></li>
+        </ul>
+        <a href="assets/Resume.pdf" download class="btn btn-primary btn-block" data-cursor="hover">Download Résumé ↓</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-brand">Bonnie Bennett <span>·</span> Data Analyst / Data Scientist</p>
+    <p class="footer-note">Built from scratch — vanilla HTML · CSS · JS. Hosted on GitHub Pages.</p>
+    <p class="footer-copy">© <span id="year"></span> Bonnie Bennett. All rights reserved.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+

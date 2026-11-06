@@ -60,8 +60,8 @@
       desc: 'A research-driven portfolio (not a code repo): an economics question answered with on-chain data. Note 01 asks whether EIP-1559\u2019s base-fee burn squeezes validator real yield \u2014 DuneSQL queries, a literature review, and a quantified \u201cstructural tax rate\u201d \u03c4 = burn / (burn + tip).',
       metrics: ['~4.7k-word note', 'Structural tax \u03c4 \u2248 40\u201370%'],
       tags: ['DuneSQL', 'Tokenomics', 'MEV', 'Research'],
-      link: 'https://github.com/DingBangBang/tokenomics-research',
-      linkLabel: 'Read the research note'
+      link: 'https://github.com/DingBangBang/tokenomics-research/blob/main/research/01-eip1559-gas-fee-redistribution.md',
+      linkLabel: 'Read Note 01'
     },
     {
       icon: '⚖️', cat: 'research', catLabel: 'Research',
@@ -100,11 +100,11 @@
     },
     {
       icon: '🔗', cat: 'onchain', catLabel: 'On-Chain',
-      title: 'DeFi Arbitrage Path Discovery',
-      desc: 'ETL pipeline using Web3.py to extract real-time Uniswap V2 liquidity reserves; modeled assets and pairs as a graph database in Neo4j and implemented Cypher multi-step traversals.',
-      metrics: ['0.14% margin', 'Cypher traversal'],
-      tags: ['Web3.py', 'Neo4j', 'Docker'],
-      link: 'https://github.com/DingBangBang/Portfolio'
+      title: 'Onchain AML & Arbitrage Graph Mining',
+      desc: 'Ethereum on-chain data + Neo4j graph database: identify AML money-laundering fund-split patterns and mine multi-hop Uniswap arbitrage paths with Cypher traversals.',
+      metrics: ['AML graph', 'Uniswap multi-hop'],
+      tags: ['Web3.py', 'Neo4j', 'Cypher', 'Docker'],
+      link: 'https://github.com/DingBangBang/Portfolio/tree/main/projects/06_Onchain_AML_Arbitrage'
     },
     {
       icon: '🧠', cat: 'ml', catLabel: 'ML / DS',
@@ -120,7 +120,7 @@
       desc: 'Dune Analytics dashboard tracking CEX / DEX / aggregator market share — 10 DuneSQL queries with docs and automation for competitive intelligence.',
       metrics: ['10 DuneSQL queries', 'CEX vs DEX'],
       tags: ['DuneSQL', 'HTML', 'Automation'],
-      link: 'https://github.com/DingBangBang/dune-dashboard'
+      link: 'https://github.com/DingBangBang/dune_dashboard_formarketshare'
     },
     {
       icon: '🤖', cat: 'bi', catLabel: 'BI',
@@ -131,12 +131,28 @@
       link: 'https://github.com/DingBangBang/report_competitor_monitor'
     },
     {
+      icon: '🧩', cat: 'ml', catLabel: 'GenAI / LLM',
+      title: 'Text-to-SQL Analytics Agent',
+      desc: 'Local-first Text-to-SQL analytics agent: LangGraph orchestration + DuckDB + DeepSeek, with semantic metrics, deterministic attribution and hard token/cost guardrails for trustworthy natural-language analytics.',
+      metrics: ['LangGraph agent', 'Token/cost guardrails'],
+      tags: ['LangGraph', 'DuckDB', 'DeepSeek', 'Streamlit'],
+      link: 'https://github.com/DingBangBang/Text-to-SQL_agent_framework'
+    },
+    {
+      icon: '🕸️', cat: 'ml', catLabel: 'GenAI / GraphRAG',
+      title: 'Opinion & Event Graph System',
+      desc: 'GenAI-native, real-time multi-agent opinion analysis and GraphRAG event-graph system — LLM-as-a-Judge and ABSA over a Kafka → Neo4j pipeline for streaming sentiment and event intelligence.',
+      metrics: ['Real-time multi-agent', 'GraphRAG'],
+      tags: ['Kafka', 'Neo4j', 'FastAPI', 'GraphRAG'],
+      link: 'https://github.com/DingBangBang/opinion-and-event-graph-system'
+    },
+    {
       icon: '🛒', cat: 'ml', catLabel: 'ML / DS',
       title: 'Sales Data Analysis · 18M records',
       desc: 'Deep dive into online-shop sales: RFM segmentation, Sankey CVR analysis, basket analysis and probabilistic LTV models across CVR, retention, churn, ARPU and ARPPU.',
       metrics: ['+50% efficiency', '+8% retention'],
       tags: ['pandas', 'plotly', 'scikit-learn'],
-      link: 'https://github.com/DingBangBang/Portfolio'
+      link: 'https://github.com/DingBangBang/Portfolio/tree/main/projects/01_Sales_EDA'
     },
     {
       icon: '📊', cat: 'bi', catLabel: 'BI',
@@ -144,7 +160,7 @@
       desc: 'Stand-alone process delivering a complex VIP / Key-Account dashboard across transactions, profits, engagement, RFM scores and reviews.',
       metrics: ['RFM scoring', 'Grafana'],
       tags: ['TiDB', 'Grafana', 'SQL'],
-      link: 'https://github.com/DingBangBang/Portfolio'
+      link: 'https://github.com/DingBangBang/Portfolio/tree/main/projects/02_KA_Dashboard'
     },
     {
       icon: '📮', cat: 'bi', catLabel: 'BI',
@@ -152,15 +168,15 @@
       desc: 'Stand-alone automation producing periodic reports in HTML, email and Excel formats — removing manual reporting work end-to-end.',
       metrics: ['HTML + Email + Excel'],
       tags: ['Python', 'Trino', 'Jinja'],
-      link: 'https://github.com/DingBangBang/Portfolio'
+      link: 'https://github.com/DingBangBang/Portfolio/tree/main/projects/03_Periodic_Reports_Automation'
     },
     {
-      icon: '🧾', cat: 'bi', catLabel: 'BI',
-      title: 'Customer Transaction Series Analysis',
-      desc: 'Series analysis encompassing customer transactions on the platform — an ETL pipeline turning raw events into behavioural insight.',
-      metrics: ['ETL pipeline'],
-      tags: ['Python', 'SQL', 'R'],
-      link: 'https://github.com/DingBangBang/Portfolio'
+      icon: '📈', cat: 'ml', catLabel: 'ML / DS',
+      title: 'Growth Analysis & Strategy (User Lifecycle)',
+      desc: 'Exchange user-lifecycle blueprint: registration conversion funnel, RFM + dimensionality segmentation, churn survival analysis, LTV forecasting, marketing attribution and incremental-ROI measurement.',
+      metrics: ['Funnel + RFM', 'LTV & ROI'],
+      tags: ['scikit-learn', 'lifetimes', 'prophet', 'Streamlit'],
+      link: 'https://github.com/DingBangBang/Portfolio/tree/main/projects/04_Customer_Analysis_BA'
     },
     {
       icon: '💬', cat: 'nlp', catLabel: 'NLP',
@@ -168,7 +184,7 @@
       desc: 'Web crawling on unstructured data, cleaning, EDA and text processing; applied topic modeling and sentiment scoring to 1M reviews with word-cloud visualisations.',
       metrics: ['1M reviews', 'Topic modeling'],
       tags: ['scrapy', 'selenium', 'NLP'],
-      link: 'https://github.com/DingBangBang/Portfolio'
+      link: 'https://github.com/DingBangBang/Portfolio/tree/main/projects/05_Comments_NLP'
     }
   ];
 

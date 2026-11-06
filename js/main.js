@@ -131,7 +131,7 @@
       link: 'https://github.com/DingBangBang/report_competitor_monitor'
     },
     {
-      icon: '🧩', cat: 'ml', catLabel: 'GenAI / LLM',
+      icon: '🧩', cat: 'ai', catLabel: 'AI Agent · LLM',
       title: 'Text-to-SQL Analytics Agent',
       desc: 'Local-first Text-to-SQL analytics agent: LangGraph orchestration + DuckDB + DeepSeek, with semantic metrics, deterministic attribution and hard token/cost guardrails for trustworthy natural-language analytics.',
       metrics: ['LangGraph agent', 'Token/cost guardrails'],
@@ -139,7 +139,7 @@
       link: 'https://github.com/DingBangBang/Text-to-SQL_agent_framework'
     },
     {
-      icon: '🕸️', cat: 'ml', catLabel: 'GenAI / GraphRAG',
+      icon: '🕸️', cat: 'ai', catLabel: 'AI Agent · GenAI',
       title: 'Opinion & Event Graph System',
       desc: 'GenAI-native, real-time multi-agent opinion analysis and GraphRAG event-graph system — LLM-as-a-Judge and ABSA over a Kafka → Neo4j pipeline for streaming sentiment and event intelligence.',
       metrics: ['Real-time multi-agent', 'GraphRAG'],

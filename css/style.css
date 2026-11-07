@@ -152,6 +152,13 @@ img { max-width: 100%; display: block; }
 .nav-link:hover, .nav-link.active { color: var(--text); }
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
 .nav-actions { display: flex; align-items: center; gap: 12px; }
+.lang-toggle {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 50px; height: 34px;
+  padding: 0 12px; border-radius: 9px; border: 1px solid var(--border-strong); background: transparent;
+  color: var(--text); font-family: var(--font-head); font-weight: 600; font-size: 13px; cursor: pointer;
+  transition: all .25s;
+}
+.lang-toggle:hover { border-color: var(--cyan); color: var(--cyan); box-shadow: var(--glow); }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
 .nav-toggle span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .3s, opacity .3s; }
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }

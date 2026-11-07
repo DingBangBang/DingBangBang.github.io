@@ -19,6 +19,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
+
+<!-- GoatCounter analytics (privacy-friendly, no cookies) -->
+<script data-goatcounter="https://bonnie.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
@@ -44,6 +48,7 @@
     <a href="#contact" class="nav-link">Contact</a>
   </nav>
   <div class="nav-actions">
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language" data-cursor="hover"><span id="langLabel">中文</span></button>
     <a href="assets/Resume.pdf" download class="btn btn-ghost btn-sm" data-cursor="hover">Résumé</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -365,6 +370,48 @@
 <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
 <script src="js/main.js"></script>
+
+<!-- GoatCounter custom events: clicks, scroll depth (incl. reach-bottom), section views -->
+<script>
+(function () {
+  function gc(path, title) {
+    if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+      window.goatcounter.count({ path: path, title: title, event: true });
+    }
+  }
+  // 1) Clicks on any link / button
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a, button');
+    if (!a) return;
+    var sec = a.closest('section');
+    var label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40) || a.getAttribute('href') || 'button';
+    gc('click/' + ((sec && sec.id) || 'page'), 'Click: ' + label);
+  });
+  // 2) Scroll depth 25/50/75/100% (100% = reached bottom)
+  var fired = {};
+  window.addEventListener('scroll', function () {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = h > 0 ? Math.min(100, (window.scrollY / h) * 100) : 100;
+    [25, 50, 75, 100].forEach(function (t) {
+      if (pct >= t && !fired[t]) { fired[t] = true; gc('scroll/' + t, 'Scroll ' + t + '%'); }
+    });
+  }, { passive: true });
+  // 3) Which sections people actually see
+  if ('IntersectionObserver' in window) {
+    var seen = {};
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (en.isIntersecting) {
+          var sec = en.target.closest('section');
+          var id = sec ? sec.id : 'footer';
+          if (!seen[id]) { seen[id] = true; gc('view/' + id, 'View: ' + id); }
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('main section[id], footer').forEach(function (n) { io.observe(n); });
+  }
+})();
+</script>
 </body>
 </html>
 
